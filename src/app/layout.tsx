@@ -4,6 +4,8 @@ import "../styles/globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 
+import { NuqsAdapter } from "nuqs/adapters/next/app";
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -22,7 +24,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         className="min-h-screen overflow-x-hidden bg-bg-default font-sans text-text-default text-sm"
       >
         <Navbar />
-        {children}
+        <NuqsAdapter> {children}</NuqsAdapter>
         <Footer />
       </body>
     </html>

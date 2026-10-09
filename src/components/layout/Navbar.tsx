@@ -22,7 +22,7 @@ export default function Navbar() {
   return (
     <header className="z-50 bg-white shadow-sm">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 md:px-8">
-        <Link href="/">
+        <Link href="/" aria-label="Logo">
           <Logo />
         </Link>
 
@@ -46,7 +46,11 @@ export default function Navbar() {
           <Button>Contact Me</Button>
         </div>
 
-        <button className="md:hidden" onClick={() => setOpen(!open)}>
+        <button
+          aria-label="Menu"
+          className="md:hidden"
+          onClick={() => setOpen(!open)}
+        >
           {open ? <X size={28} /> : <Menu size={28} />}
         </button>
       </div>

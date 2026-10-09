@@ -66,3 +66,14 @@
   /************************ Shadow ************************/
   --shadow-small: 0 4px 16px rgb(0 0 0 / 0.12);
 }
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}

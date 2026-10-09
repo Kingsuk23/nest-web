@@ -19,6 +19,7 @@ const Footer = () => {
               href="https://www.facebook.com"
               rel="noopener noreferrer"
               target="_blank"
+              aria-label="Facebook"
             >
               <Facebook />
             </Link>
@@ -26,6 +27,7 @@ const Footer = () => {
               href="https://www.instagram.com"
               rel="noopener noreferrer"
               target="_blank"
+              aria-label="Instagram"
             >
               <Instagram />
             </Link>
@@ -33,15 +35,14 @@ const Footer = () => {
               href="https://www.youtube.com"
               rel="noopener noreferrer"
               target="_blank"
+              aria-label="Youtube"
             >
               <Youtube />
             </Link>
           </div>
         </div>
         <div className="flex flex-col gap-y-6">
-          <h4 className="text-text-default text-[28px]  font-semibold">
-            Company
-          </h4>
+          <p className="text-text-default text-lg  font-semibold">Company</p>
           <div className="flex flex-col gap-y-4">
             <Link href="/about" className="text-lg  text-text-secondary">
               About us
@@ -58,9 +59,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="flex flex-col gap-y-6">
-          <h4 className="text-text-default text-[28px]  font-semibold">
-            Services
-          </h4>
+          <p className="text-text-default text-lg font-semibold">Services</p>
           <div className="flex flex-col gap-y-4">
             <Link href="/buy" className="text-lg  text-text-secondary">
               Buy a home
@@ -77,9 +76,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="flex flex-col gap-y-6">
-          <h4 className="text-text-default text-[28px]  font-semibold">
-            Contact
-          </h4>
+          <p className="text-text-default text-lg  font-semibold">Contact</p>
           <div className="flex flex-col gap-y-4">
             <p className="text-lg  text-text-secondary">
               123 Real Estate BLVD, NY
