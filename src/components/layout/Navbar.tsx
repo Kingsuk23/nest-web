@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { Suspense, useState } from "react";
 import { Menu, X } from "lucide-react";
 
 import Link from "next/link";
@@ -30,13 +30,15 @@ export default function Navbar() {
           <ul className="flex items-center gap-8">
             {navItems.map((item) => (
               <li key={item.href}>
-                <ActiveLink
-                  href={item.href}
-                  className="text-text-default text-base  transition-colors hover:text-text-active"
-                  activeClassName="text-text-active font-semibold"
-                >
-                  {item.title}
-                </ActiveLink>
+                <Suspense fallback={<p>Loading</p>}>
+                  <ActiveLink
+                    href={item.href}
+                    className="text-text-default text-base  transition-colors hover:text-text-active"
+                    activeClassName="text-text-active font-semibold"
+                  >
+                    {item.title}
+                  </ActiveLink>
+                </Suspense>
               </li>
             ))}
           </ul>
